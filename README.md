@@ -35,12 +35,14 @@
 - **스마트 앨범 UI/UX 구현**: React와 Vite를 기반으로 날짜, 위치, 카테고리별(건물, 문화, 바다 등)로 자동 분류된 앨범을 동적으로 렌더링하는 UI 개발.
 <img width="450" height="240" alt="image" src="https://github.com/user-attachments/assets/536563cf-063f-4924-8956-49c2cecb60b1" />
 
-
 #### 4. DevOps & Cloud Infrastructure
 
 - **Docker 컨테이너화**: 프론트엔드, 백엔드, AI 서버, 데이터베이스(MySQL, Redis)를 분리하여 Docker Compose로 묶어 독립적인 실행 환경 구축 .
 - **AWS EC2 배포**: AWS Linux 환경에 Docker 엔진 및 Nginx 리버스 프록시를 세팅하여 무중단 서비스 인프라 구축.
 - **CI/CD 파이프라인**: GitHub Actions를 활용하여 빌드부터 도커 이미지 푸시, AWS EC2 SSH Pull 및 자동 배포로 이어지는 자동화 파이프라인 구성.
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/ab86e95a-2452-4768-9eff-1888ea1741cf" width="70%" alt="image">
+</p>
 
 ### 📁 디렉토리 구조 (Node.js 백엔드 중심)
 

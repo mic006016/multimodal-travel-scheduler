@@ -1,0 +1,59 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    span {
+      font-size: 1rem;
+    }
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+
+      padding: 3px 7px;
+
+      outline: none;
+      border: none;
+      background-color: transparent;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: gray;
+
+        border-radius: 4px;
+
+        color: black;
+      }
+      &.active {
+        background-color: gray;
+
+        border-radius: 4px;
+        color: black;
+      }
+      &.inactive {
+        background-color: white;
+        border-radius: 4px;
+
+        color: black;
+      }
+      &__number {
+        &.active {
+          color: red;
+        }
+      }
+    }
+  }
+}

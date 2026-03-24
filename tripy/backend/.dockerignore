@@ -1,0 +1,30 @@
+# ---------------------------------
+# Node.js 필수 제외
+# ---------------------------------
+# 로컬 의존성 (Docker 안에서 npm install로 다시 깔아야 함)
+node_modules/
+
+# 빌드 결과물 (Docker 안에서 빌드할 거라면 제외)
+dist/
+build/
+
+# 로그 파일
+npm-debug.log
+yarn-error.log
+*.log
+
+# ---------------------------------
+# 보안 및 설정
+# ---------------------------------
+.env
+.env.*
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.DS_Store
+Thumbs.db
+
+# IDE 설정
+.vscode/
+.idea/

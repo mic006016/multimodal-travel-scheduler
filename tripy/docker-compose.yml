@@ -1,0 +1,42 @@
+version: "3.8"
+
+name: tripyserver
+
+services:
+  frontend:
+    # [수정] 앞에 ID를 꼭 붙여야 함.
+    image: mic006016/tripy-nginx:latest
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - tripyserver
+
+  backend:
+    # [수정] 앞에 ID를 꼭 붙여야 함.
+    image: mic006016/tripy-node:latest
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" # 직접 접근 테스트용 (필요 시 주석 처리 가능)
+    restart: unless-stopped
+    volumes:
+      # [내 컴퓨터 경로] : [컨테이너 내부 경로]
+      # - ./backend/uploads:/app/uploads # 개발 시
+      # [EC2의 실제 경로] : [컨테이너 내부 경로]
+      - /home/ubuntu/Tripy/backend/uploads:/app/uploads  # 배포 시
+    environment:
+      - NODE_ENV=production # 배포 시 production
+    env_file:
+      - ./backend/.env
+    networks:
+      - tripyserver
+
+networks:
+  tripyserver:
+    external: true

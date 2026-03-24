@@ -1,0 +1,30 @@
+REDIS=redis://localhost:6379
+VITE=http://localhost:5173
+NGINX=http://localhost:8080
+EXPO=http://192.168.10.82:19000
+
+# 서버 포트
+PORT=5000
+
+# Node 서버 주소
+BASE_URL=http://localhost:5000
+
+# FastAPI 서버 주소
+AI_SERVER_URL=http://fastapi:8000
+
+# 환경 (배포 시 production)
+NODE_ENV=production
+
+# 쿠키 암호화 키 (임의로 설정)
+COOKIE_SECRET=tripy_secure_key_1234
+
+# ★ DB 설정 (Docker 내부 통신용)
+DB_HOST=tripy_mysql
+DB_PORT=3306  # 로컬에서 사용 시 3309
+DB_USER=root
+DB_PASSWORD=1234
+DB_DATABASE=trip-db
+
+# ★ Redis 설정 (Docker 내부 통신용)
+REDIS_HOST=tripy_redis
+REDIS_PORT=6379

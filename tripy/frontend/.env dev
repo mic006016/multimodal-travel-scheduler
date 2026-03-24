@@ -1,0 +1,6 @@
+VITE_API_URL=http://localhost:8080/api
+VITE_AI_URL=http://localhost:8080/ai
+
+# aws 배포 시
+# VITE_API_URL=http://3.25.11.158/api
+# VITE_AI_URL=http://3.25.11.158/ai

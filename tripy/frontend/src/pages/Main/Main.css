@@ -1,0 +1,225 @@
+/* 컨테이너 및 폰트 설정 */
+.main-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #1f2937;
+  box-sizing: border-box;
+}
+
+/* 헤더 영역 */
+.main-header {
+  margin-bottom: 2.5rem;
+  margin-top: 150px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.header-description {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* 버튼 공통 */
+.btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: #8cbf68;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+/* 섹션 공통 */
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* 그리드 레이아웃 (카드 영역) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* 반응형: 화면이 좁아지면 1열로 변경 (선택사항) */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.summary-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-title-text {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.card-desc {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* 아이콘 원형 및 테마 색상 (동적 스타일 대체) */
+.icon-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* 테마: Green */
+.theme-green .icon-circle {
+  background-color: #f0fdf4;
+  color: #8cbf68;
+}
+
+.theme-green .count-text {
+  color: #8cbf68;
+}
+
+/* 테마: Orange */
+.theme-orange .icon-circle {
+  background-color: #fff7ed;
+  color: #fb923c;
+}
+
+.theme-orange .count-text {
+  color: #fb923c;
+}
+
+/* 리스트 아이템 스타일 */
+.trip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.trip-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.trip-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.trip-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trip-thumb {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #e5e7eb;
+}
+
+.trip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trip-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.trip-date {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.empty-message {
+  padding: 1rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.loading-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pagination-wrapper {
+  margin-top: 2rem;
+}

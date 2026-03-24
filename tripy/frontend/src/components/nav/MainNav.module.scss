@@ -1,0 +1,51 @@
+/*----------Navigator------------*/
+
+
+  .MainNav ul {
+    list-style: none; /* 불릿 제거 */
+    padding-left: 0; /* 기본 들여쓰기 제거 */
+    margin: 0; /* 필요시 margin도 제거 */
+    padding: 0;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    /* background-color: black; */
+    color: black;
+  }
+.MainNav ul li {
+  display: block;
+  padding: 8px;
+  margin: 0 10px;
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.MainNav ul li:active {
+  transform: translateY(1px);
+}
+
+.MainNav ul li.check {
+  background-color: #88ac73;
+  /* opacity: 0.2; */
+  border-radius: 12px;
+  color: black;
+}
+.MainNav ul li::before {
+  content: "";
+  width: 0%;
+  position: absolute;
+  background-color: #88ac73;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+  transition: 0.4s;
+  /* display: inline-block; */
+}
+.MainNav ul li:hover::before {
+  height: 45px;
+  width: 105%;
+  border-radius: 12px;
+  opacity: 0.2;
+}
+

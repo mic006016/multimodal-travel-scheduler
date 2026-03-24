@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "root",
+    "password": "1234",
+    "database": "trip-db",
+    "port": "3309",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": true
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "trip-db",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "1234",
+    "database": "trip-db",
+    "port": "3306",
+    "host": "tripy_mysql",
+    "dialect": "mysql",
+    "logging": false
+  }
+}

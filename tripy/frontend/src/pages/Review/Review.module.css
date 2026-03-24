@@ -1,0 +1,156 @@
+:root {
+  --review-scroll-margin: 150px;
+  --review-header-offset: 150px;
+}
+
+/* Ensure the browser accounts for the sticky header when scrolling to anchors */
+html {
+  scroll-padding-top: var(--review-scroll-margin, 150px);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.header {
+  position: relative;
+  top: 0;
+  background: #fff;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  padding-top: 200px;
+  /* z-index: 50; */
+}
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.promptLabel {
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+}
+.headerActions button {
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+.prompt {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.content {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+.left {
+  width: 140px;
+}
+.thumbBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 600px;
+  overflow: auto;
+}
+.thumb {
+  border: 1px solid transparent;
+  padding: 4px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+.thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.selected {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.08);
+}
+.center {
+  flex: 1;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.imageCard {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  /* avoid being hidden under the sticky header when scrolled into view */
+  scroll-margin-top: var(--review-scroll-margin, 150px);
+}
+.cardPhoto {
+  width: 200px;
+  flex-shrink: 0;
+}
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.cardNotes {
+  flex: 1;
+}
+.newNote textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.newActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.notesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.noteItem textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.noteActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+.right {
+  width: 260px;
+}
+.summaryBox {
+  border: 1px solid #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+}
+.summaryText {
+  min-height: 80px;
+  padding: 8px;
+  background: #fafafa;
+  border-radius: 6px;
+}
+.summaryActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}

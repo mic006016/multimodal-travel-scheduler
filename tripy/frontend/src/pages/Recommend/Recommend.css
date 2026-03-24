@@ -1,0 +1,85 @@
+.recommend {
+  padding: 40px 0;
+}
+
+.recommend-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 80px;
+}
+
+.recommend-sub {
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.recommend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.recommend-card {
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-header h3 {
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #eef6f0;
+  color: #2f7d4a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.card-reason {
+  margin: 16px 0;
+}
+
+.reason-title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.reason-desc {
+  color: #555;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .card-actions {
+    flex-direction: column;
+  }
+}
+
+.recommend-loading {
+  display: block;
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}

@@ -1,0 +1,222 @@
+.container {
+  // [수정] 고정 너비(1280px) 대신 화면의 95%를 사용하여 좌우 여백을 줄이고 꽉 차게 만듭니다.
+  max-width: 95%;
+  margin: 120px auto 50px auto;
+  padding: 0 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  // 메인 컨텐츠 (좌측 프롬프트 + 중앙 에디터 + 우측 요약)
+  .mainContent {
+    display: grid;
+    // [수정] 사이드바 너비를 320px -> 380px로 키워서 더 크게 보이게 설정
+    // 화면이 작을 때는 비율이 깨질 수 있으므로 minmax를 사용하거나 미디어 쿼리 고려 가능하지만,
+    // 요청하신 대로 "크게" 고정합니다.
+    grid-template-columns: 380px 1fr 380px;
+    gap: 30px; // 간격도 조금 더 넓힘
+    align-items: start;
+  }
+
+  // 공통 사이드바 제목 스타일
+  .sidebarTitle {
+    font-size: 1.2rem; // 폰트도 약간 키움
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #111;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 10px;
+  }
+
+  // 1. 좌측 프롬프트 사이드바
+  .promptSection {
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 150px); // 하단 여유 공간 확보
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px; // 내부 패딩도 넓힘
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    textarea {
+      width: 100%;
+      flex-grow: 1;
+      padding: 1.2rem;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      background-color: #f8fafc;
+      resize: none;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #334155;
+
+      &:focus {
+        outline: 2px solid #2563eb;
+        background-color: #fff;
+      }
+    }
+  }
+
+  // 2. 중앙 에디터 영역
+  .editorWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0; // 그리드 내부에서 내용 넘침 방지
+
+    .imageList {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .imageRow {
+      display: flex;
+      // 화면이 아주 넓으므로 가로 배치 유지하되, 반응형 고려
+      flex-direction: column;
+      @media (min-width: 1400px) {
+        flex-direction: row;
+      }
+
+      gap: 20px;
+      background: white;
+      padding: 20px; // 패딩 증가
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+      .imageBox {
+        width: 100%;
+        @media (min-width: 1400px) {
+          width: 240px; // 중앙 사진 크기도 200px -> 240px로 증가
+        }
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: 180px; // 높이 증가
+          object-fit: cover;
+          border-radius: 8px;
+          background: #f3f4f6;
+        }
+      }
+
+      .textBox {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+          width: 100%;
+          flex-grow: 1;
+          min-height: 140px;
+          padding: 1.2rem;
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          resize: vertical;
+          font-size: 1rem;
+
+          &:focus {
+            border-color: #2563eb;
+            outline: none;
+          }
+        }
+
+        .readOnlyTextarea {
+          background-color: #f9fafb;
+          color: #6b7280;
+        }
+
+        .buttonGroup {
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+          margin-top: 12px;
+
+          button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+          }
+
+          .btnBlue {
+            background: #2563eb;
+            color: white;
+            &:hover {
+              background: #1d4ed8;
+            }
+          }
+          .btnGray {
+            background: #6b7280;
+            color: white;
+            &:hover {
+              background: #4b5563;
+            }
+          }
+          .btnRed {
+            background: #ef4444;
+            color: white;
+            &:hover {
+              background: #dc2626;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 3. 우측 AI 요약 사이드바
+  .sideSummary {
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 150px);
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px; // 패딩 증가
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    .summaryDisplay {
+      flex-grow: 1;
+      font-size: 1rem;
+      line-height: 1.7; // 가독성을 위해 줄간격 증가
+      color: #334155;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #f1f5f9;
+    }
+
+    .summaryBtn {
+      width: 100%;
+      padding: 16px; // 버튼 크기 증가
+      background: #0f172a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #334155;
+      }
+    }
+  }
+}

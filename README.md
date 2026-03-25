@@ -41,7 +41,7 @@
 - **AWS EC2 배포**: AWS Linux 환경에 Docker 엔진 및 Nginx 리버스 프록시를 세팅하여 무중단 서비스 인프라 구축.
 - **CI/CD 파이프라인**: GitHub Actions를 활용하여 빌드부터 도커 이미지 푸시, AWS EC2 SSH Pull 및 자동 배포로 이어지는 자동화 파이프라인 구성.
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/ab86e95a-2452-4768-9eff-1888ea1741cf" width="70%" alt="image">
+  <img src="https://github.com/user-attachments/assets/ab86e95a-2452-4768-9eff-1888ea1741cf" width="75%" alt="image">
 </p>
 
 ### 📁 디렉토리 구조 (Node.js 백엔드 중심)

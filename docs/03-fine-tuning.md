@@ -28,7 +28,7 @@
 
 Backbone 전체를 푸는 대신 고차원 특징을 담당하는 영역만 영리하게 개방함.
 
-- **전략:** 저수준 특징을 추출하는 앞부분은 고정하고, **features의 후반부(Block 10~14)와 features*만 선별적으로 해제하여 학습함.
+- **전략:** 저수준 특징을 추출하는 앞부분은 고정하고, **features의 후반부(Block 10~14)와 features**만 선별적으로 해제하여 학습함.
 - **효과:** 과적합을 방지하면서 건물 외벽, 도로 질감 등 세밀한 특징(Fine-grained features)을 학습하도록 유도함.
 <img height="300" alt="image" src="https://github.com/user-attachments/assets/50c6e2f4-7ffc-4f8e-a40b-41e815909da7" />
 

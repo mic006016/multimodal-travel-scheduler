@@ -61,6 +61,10 @@
 
 Grad-CAM 수행 결과, 모델이 배경이 아닌 객체 고유의 특징에 정확히 집중하고 있음을 확인함.
 
+| Buildings | Street | Culture | Parks |
+|:---:|:---:|:---:|:---:|
+| <img height="400" alt="image" src="https://github.com/user-attachments/assets/3e1e8154-9918-4d62-affc-938151937d61" /> | <img height="400" alt="image" src="https://github.com/user-attachments/assets/5e7ed809-6af2-446a-aa13-1f05843a2d04" /> | <img height="400" alt="image" src="https://github.com/user-attachments/assets/52e31ec9-b376-47f8-a160-308d522d280d" /> | <img height="400" alt="image" src="https://github.com/user-attachments/assets/260ddfd5-b1b9-44ed-9340-aaa00e2e85db" /> |
+
 - **Buildings:** 도로가 아닌 **건물의 외벽과 창문**에 히트맵 활성화.
 - **Street:** 건물이 아닌 **바닥(도로면)과 소실점**을 따라 히트맵 형성.
 - **Culture:** 주변 숲이 아닌 **기와 지붕, 처마, 탑** 등 고유 양식에 집중.

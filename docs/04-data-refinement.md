@@ -56,6 +56,16 @@
 
 **4.2 Grad-CAM 기반 판단 근거 확인**
 
+<details>
+<summary>Grad-CAM Images</summary>
+
+<img height="350" alt="image" src="https://github.com/user-attachments/assets/5836138f-9cce-46f2-aff9-bab326393d73" />
+<img height="350" alt="image" src="https://github.com/user-attachments/assets/225ee70d-b4ff-487f-acb6-e494358691a0" />
+<img height="350" alt="image" src="https://github.com/user-attachments/assets/b48c8569-82ae-411d-91de-d7cd32f3cdbd" />
+<img height="350" alt="image" src="https://github.com/user-attachments/assets/309bd140-77df-423d-a907-bcf30d0421a4" />
+
+</details>
+
 - **Buildings:** 도로를 무시하고 창문 배열과 외벽 구조물에 정확히 집중함.
 - **Street:** 도로 표면(아스팔트), 차선, 소실점에 히트맵이 형성됨.
 - **Culture:** 기와지붕과 처마 곡선에 반응하나, 주변 나무까지 포함하는 시각적 중첩 문제가 확인됨.
